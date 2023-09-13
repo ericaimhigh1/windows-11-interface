@@ -1,0 +1,971 @@
+<!-- Windows 11 Calculator with Dark Mode, Slide-in Menu and Click to Copy - HTML, CSS & JavaScript
+Follow me on;
+Twitter: https://twitter.com/ericaimhigh
+Instagram: https://instagram.com/@ericaimhigh_
+Threads: https://threads.net/@ericaimhigh_ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link
+      rel="shortcut icon"
+      href="files/icons/start.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- TaskBar -->
+    <div class="taskbar">
+      <div class="task-container start">
+        <i class="fa-regular fa-expand fullscreen"></i>
+        <i class="fa-solid fa-moon-stars theme"></i>
+      </div>
+      <div class="task-container center">
+        <img src="files/icons/start.svg" class="task-icon" name="start" />
+        <img src="files/icons/vs-code.svg" class="task-icon" name="vscode" />
+        <img src="files/icons/word.svg" class="task-icon" name="word" />
+        <img
+          src="files/icons/calculator.png"
+          class="task-icon"
+          name="calculator"
+        />
+        <img
+          src="files/icons/photoshop.png"
+          class="task-icon"
+          name="photoshop"
+        />
+        <img
+          src="files/icons/coreldraw.svg"
+          class="task-icon"
+          name="coreldraw"
+        />
+        <img src="files/icons/vlc.svg" class="task-icon" name="vlc" />
+        <img src="files/icons/chrome.svg" class="task-icon" name="chrome" />
+      </div>
+      <div class="task-container end">
+        <div class="">
+          <i class="fa fa-chevron-up fa-xsm"></i>
+        </div>
+        <div class="">
+          <i class="fa-brands fa-bluetooth fa-xsm"></i>
+        </div>
+        <div class="">
+          <i class="fa-light fa-globe fa-xsm network"></i>
+        </div>
+        <div class="">
+          <i class="fa-regular fa-volume fa-xsm"></i>
+        </div>
+        <div class="">
+          <i class="fa-solid fa-battery battery"></i>
+        </div>
+        <div class="date-time">
+          <p class="time"></p>
+          <p class="date"></p>
+        </div>
+        <div class="">
+          <i class="fa-light fa-bell-on"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Desktop & Icons-->
+    <div class="desktop">
+      <div class="icon">
+        <img src="files/icons/coreldraw.svg" name="coreldraw" />
+        <p class="icon-name">CorelDRAW 2021</p>
+      </div>
+      <div class="icon">
+        <img src="files/icons/vlc.svg" name="vlc" />
+        <p class="icon-name">VLC Media Player</p>
+      </div>
+      <div class="icon">
+        <img src="files/icons/vs-code.svg" name="vscode" />
+        <p class="icon-name">VS Code</p>
+      </div>
+      <div class="icon">
+        <img src="files/icons/chrome.svg" name="chrome" />
+        <p class="icon-name">Google Chrome</p>
+      </div>
+      <div class="icon">
+        <img src="files/icons/photoshop.png" name="photoshop" />
+        <p class="icon-name">Photoshop</p>
+      </div>
+      <div class="icon">
+        <img src="files/icons/word.svg" name="word" />
+        <p class="icon-name">Word</p>
+      </div>
+    </div>
+
+    <!-- Start Menu -->
+    <div class="start-menu parent default" id="start">
+      <div class="start-top">
+        <div class="searchbar">
+          <i class="fa fa-search"></i>
+          <input
+            type="text"
+            name="start-search"
+            class="start-search"
+            placeholder="Type here to search"
+          />
+        </div>
+        <div class="section-title">
+          <p class="pineed">Pinned</p>
+          <p class="all">All apps <i class="fa fa-chevron-right fa-2xs"></i></p>
+        </div>
+        <div class="pinned-icons">
+          <div class="icon">
+            <img src="files/icons/coreldraw.svg" name="coreldraw" />
+            <p class="icon-name">CorelDRAW 2021</p>
+          </div>
+          <div class="icon">
+            <img src="files/icons/calculator.png" name="coreldraw" />
+            <p class="icon-name">Calculator</p>
+          </div>
+          <div class="icon">
+            <img src="files/icons/chrome.svg" name="coreldraw" />
+            <p class="icon-name">Chrome</p>
+          </div>
+          <div class="icon">
+            <img src="files/icons/photoshop.png" name="coreldraw" />
+            <p class="icon-name">Photoshop</p>
+          </div>
+          <div class="icon">
+            <img src="files/icons/vs-code.svg" name="coreldraw" />
+            <p class="icon-name">VS Code</p>
+          </div>
+          <div class="icon">
+            <img src="files/icons/word.svg" name="coreldraw" />
+            <p class="icon-name">Word</p>
+          </div>
+          <div class="icon">
+            <img src="files/icons/settings.svg" name="coreldraw" />
+            <p class="icon-name">Settings</p>
+          </div>
+          <div class="icon">
+            <img src="files/icons/edge.svg" name="coreldraw" />
+            <p class="icon-name">Microsft Edge</p>
+          </div>
+          <div class="icon">
+            <img src="files/icons/xbox.svg" name="coreldraw" />
+            <p class="icon-name">Xbox</p>
+          </div>
+          <div class="icon">
+            <img src="files/icons/photos.svg" name="coreldraw" />
+            <p class="icon-name">Photos</p>
+          </div>
+          <div class="icon">
+            <img src="files/icons/notepad.png" name="notepad" />
+            <p class="icon-name">Notepad</p>
+          </div>
+          <div class="icon">
+            <img src="files/icons/calendar.png" name="calendar" />
+            <p class="icon-name">Calendar</p>
+          </div>
+          <div class="icon">
+            <img src="files/icons/powerpoint.svg" name="powerpoint" />
+            <p class="icon-name">Powerpoint</p>
+          </div>
+          <div class="icon">
+            <img src="files/icons/zoom.svg" name="zoom" />
+            <p class="icon-name">Zoom</p>
+          </div>
+          <div class="icon">
+            <img src="files/icons/films-tv.svg" name="films-tv" />
+            <p class="icon-name">Films & TV</p>
+          </div>
+          <div class="icon">
+            <img src="files/icons/mail.png" name="mail" />
+            <p class="icon-name">Mail</p>
+          </div>
+          <div class="icon">
+            <img src="files/icons/camera.png" name="camera" />
+            <p class="icon-name">Camera</p>
+          </div>
+          <div class="icon">
+            <img src="files/icons/store.svg" name="store" />
+            <p class="icon-name">Microsoft Store</p>
+          </div>
+        </div>
+        <div class="section-title">
+          <p class="pineed">Recommended</p>
+          <p class="all">More <i class="fa fa-chevron-right fa-2xs"></i></p>
+        </div>
+        <div class="recommended">
+          <div class="rec">
+            <div class="icon">
+              <img src="files/icons/vlc.svg" name="vlc" />
+            </div>
+            <div class="name">
+              <p class="filename">Agnus_Dei_by_Michael W Smith with Lyrics</p>
+              <p class="openDate">Yesterday at 14:06</p>
+            </div>
+          </div>
+          <div class="rec">
+            <div class="icon">
+              <img src="files/icons/telegram.svg" name="telegram" />
+            </div>
+            <div class="name">
+              <p class="filename">Telegram</p>
+              <p class="openDate">Recently added</p>
+            </div>
+          </div>
+          <div class="rec">
+            <div class="icon">
+              <img src="files/icons/winrar.svg" name="winrar" />
+            </div>
+            <div class="name">
+              <p class="filename">Design Vectors & Templates</p>
+              <p class="openDate">8 Aug</p>
+            </div>
+          </div>
+          <div class="rec">
+            <div class="icon">
+              <img src="files/icons/vlc.svg" name="vlc" />
+            </div>
+            <div class="name">
+              <p class="filename">
+                CSS Tutorial - Full Course for Beginner - FreeCodeCamp.Org
+              </p>
+              <p class="openDate">Monday at 23:48</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="start-bottom">
+        <div class="user">
+          <img src="files/user.png" class="avatar" />
+          <span class="name">Eric Teye</span>
+        </div>
+        <div class="action">
+          <i class="fa-light fa-folder-user"></i>
+          <i class="fa-light fa-gear"></i>
+          <i class="fa-light fa-power-off"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Apps From Here -->
+
+    <!-- App: Calculator -->
+    <div class="calculator parent drag default" id="calculator">
+      <div class="menu">
+        <i class="fa fa-bars menuBtn"></i>
+
+        <ul>
+          <h5>Calculator</h5>
+          <a href="#">
+            <li class="active">
+              <div class="indicator"></div>
+              <i class="fa-light fa-calculator"></i>
+              <span class="menu-name">Standard</span>
+            </li>
+          </a>
+          <a href="#">
+            <li>
+              <div class="indicator"></div>
+              <i class="fa-light fa-flask"></i>
+              <span class="menu-name">Scientific</span>
+            </li>
+          </a>
+          <a href="#">
+            <li>
+              <div class="indicator"></div>
+              <i class="fa-light fa-chart-line-up"></i>
+              <span class="menu-name">Graphing</span>
+            </li>
+          </a>
+          <a href="#">
+            <li>
+              <div class="indicator"></div>
+              <i class="fa-light fa-code"></i>
+              <span class="menu-name">Programmer</span>
+            </li>
+          </a>
+          <a href="#">
+            <li>
+              <div class="indicator"></div>
+              <i class="fa-light fa-calendar"></i>
+              <span class="menu-name">Date Calculation</span>
+            </li>
+          </a>
+
+          <h5>Converter</h5>
+
+          <a href="#">
+            <li>
+              <div class="indicator"></div>
+              <i class="fa-light fa-coins"></i>
+              <span class="menu-name">Currency</span>
+            </li>
+          </a>
+          <a href="#">
+            <li>
+              <div class="indicator"></div>
+              <i class="fa-light fa-cube"></i>
+              <span class="menu-name">Volume</span>
+            </li>
+          </a>
+          <a href="#">
+            <li>
+              <div class="indicator"></div>
+              <i class="fa-light fa-ruler-vertical"></i>
+              <span class="menu-name">Length</span>
+            </li>
+          </a>
+          <a href="#">
+            <li>
+              <div class="indicator"></div>
+              <i class="fa-light fa-weight"></i>
+              <span class="menu-name">Weight and mass</span>
+            </li>
+          </a>
+          <a href="#">
+            <li>
+              <div class="indicator"></div>
+              <i class="fa-light fa-temperature-full"></i>
+              <span class="menu-name">Temperature</span>
+            </li>
+          </a>
+          <a href="#">
+            <li>
+              <div class="indicator"></div>
+              <i class="fa-light fa-fire-flame-curved"></i>
+              <span class="menu-name">Energy</span>
+            </li>
+          </a>
+          <a href="#">
+            <li>
+              <div class="indicator"></div>
+              <i class="fa-light fa-layer-plus"></i>
+              <span class="menu-name">Area</span>
+            </li>
+          </a>
+          <a href="#">
+            <li>
+              <div class="indicator"></div>
+              <i class="fa-light fa-person-running"></i>
+              <span class="menu-name">Speed</span>
+            </li>
+          </a>
+          <a href="#">
+            <li>
+              <div class="indicator"></div>
+              <i class="fa-light fa-clock"></i>
+              <span class="menu-name">Time</span>
+            </li>
+          </a>
+          <a href="#">
+            <li>
+              <div class="indicator"></div>
+              <i class="fa-light fa-bolt-lightning"></i>
+              <span class="menu-name">Power</span>
+            </li>
+          </a>
+          <a href="#">
+            <li>
+              <div class="indicator"></div>
+              <i class="fa-light fa-file-binary"></i>
+              <span class="menu-name">Data</span>
+            </li>
+          </a>
+          <a href="#">
+            <li>
+              <div class="indicator"></div>
+              <i class="fa-light fa-gauge"></i>
+              <span class="menu-name">Pressure</span>
+            </li>
+          </a>
+          <a href="#">
+            <li>
+              <div class="indicator"></div>
+              <i class="fa-light fa-angle"></i>
+              <span class="menu-name">Angle</span>
+            </li>
+          </a>
+        </ul>
+        <a href="#">
+          <div class="settings">
+            <li>
+              <i class="fa-light fa-cog"></i>
+              <span class="menu-name">Settings</span>
+            </li>
+          </div>
+        </a>
+      </div>
+
+      <div class="title-bar dragheader">
+        <div class="left">
+          <img src="files/icons/calculator.png" class="title-icon" />
+          <span class="title">Calculator</span>
+        </div>
+        <div class="right">
+          <button class="hide"><i class="fa fa-dash"></i></button>
+          <button class="resize"><i class="fa-regular fa-square"></i></button>
+          <a href="#"
+            ><button class="close"><i class="fa fa-close"></i></button
+          ></a>
+        </div>
+      </div>
+      <div class="options">
+        <div class="a">
+          <i class="fa fa-bars menuBtn2"></i>
+          <span class="type-name">Standard</span>
+          <i class="fa-regular fa-arrow-to-top on-top"></i>
+        </div>
+        <div class="b"><i class="fa-regular fa-copy"></i></div>
+      </div>
+
+      <form>
+        <div class="history">
+          <div class="history-w">
+            <div class="history-list">
+              <input
+                type="text"
+                class="history-item"
+                name="item1"
+                value=""
+                disabled
+              />
+            </div>
+            <div class="history-list">
+              <input
+                type="text"
+                class="history-item"
+                name="item2"
+                value=""
+                disabled
+              />
+            </div>
+            <div class="history-list">
+              <input
+                type="text"
+                class="history-item"
+                name="item3"
+                value=""
+                disabled
+              />
+            </div>
+            <div class="history-list">
+              <input
+                type="text"
+                class="history-item"
+                name="item4"
+                value="4"
+                disabled
+              />
+            </div>
+            <div class="history-list">
+              <input
+                type="text"
+                class="history-item"
+                name="item5"
+                value="5"
+                disabled
+              />
+            </div>
+            <div class="history-list">
+              <input
+                type="text"
+                class="history-item"
+                name="item6"
+                value="6"
+                disabled
+              />
+            </div>
+            <div class="history-list">
+              <input
+                type="text"
+                class="history-item"
+                name="item7"
+                value="7"
+                disabled
+              />
+            </div>
+            <div class="history-list">
+              <input
+                type="text"
+                class="history-item"
+                name="item8"
+                value="8"
+                disabled
+              />
+            </div>
+            <div class="history-list">
+              <input
+                type="text"
+                class="history-item"
+                name="item9"
+                value="9"
+                disabled
+              />
+            </div>
+            <div class="history-list">
+              <input
+                type="text"
+                class="history-item"
+                name="item10"
+                value="10"
+                disabled
+              />
+            </div>
+          </div>
+
+          <div class="delete">
+            <i class="fa fa-close historyBtn"></i>
+            <i class="fa-light fa-trash-can clearBtn"></i>
+          </div>
+        </div>
+
+        <input type="hidden" value="" class="mmry" disabled name="mmry" />
+        <input
+          type="text"
+          value=" "
+          disabled
+          class="display2"
+          name="display2"
+        />
+        <input type="text" value="0" disabled class="display" name="display" />
+        <div class="memory">
+          <input
+            type="button"
+            class="mry"
+            name="mc"
+            value="MC"
+            onclick="
+                mmry.value = '';
+                mr.toggleAttribute('disabled');
+                mc.toggleAttribute('disabled');
+                m.toggleAttribute('disabled');
+                "
+            disabled
+          />
+
+          <input
+            type="button"
+            class="mry"
+            value="MR"
+            name="mr"
+            onclick="
+                    display.value = mmry.value ;"
+            disabled
+          />
+
+          <input
+            type="button"
+            class="mry"
+            name="mplus"
+            value="M+"
+            onclick="
+                 if(mmry.value === ''){
+                    mmry.value = eval(mmry.value + '+' + display.value);
+                    alert('Saved: ' + mmry.value);
+                    mc.toggleAttribute('disabled');
+                    mr.toggleAttribute('disabled');
+                    m.toggleAttribute('disabled');
+                    } else{
+                        mmry.value = eval(mmry.value + '+' + display.value);
+                        alert('Saved: ' + mmry.value);
+                    }"
+          />
+
+          <input
+            type="button"
+            class="mry"
+            name="mmnus"
+            value="M-"
+            onclick="
+                 if(mmry.value === ''){
+                    mmry.value = eval(mmry.value + '-' + display.value);
+                    alert('Saved: ' + mmry.value);
+                    mc.toggleAttribute('disabled');
+                    mr.toggleAttribute('disabled');
+                    m.toggleAttribute('disabled');
+                    } else{
+                        mmry.value = eval(mmry.value + '-' + display.value);
+                        alert('Saved: ' + mmry.value);
+                    }"
+          />
+
+          <input
+            type="button"
+            class="mry"
+            name="ms"
+            value="MS"
+            onclick="
+                if (display.value === '0' || display.value === ''){
+                    alert('Nothing to save');
+                } else {
+                    if(mmry.value === ''){
+                    mmry.value = display.value;
+                    alert('Saved: ' + mmry.value);
+                    mc.toggleAttribute('disabled');
+                    mr.toggleAttribute('disabled');
+                    m.toggleAttribute('disabled');
+                    } else{
+                        mmry.value = display.value;
+                        alert('Saved: ' + mmry.value);
+
+                        //Save to Memory History
+                        if (item1.value === ''){
+                            item1.value = mmry.value;
+                        } else if (item2.value === ''){
+                            item2.value = mmry.value;
+                        } else if (item3.value === ''){
+                            item3.value = mmry.value;
+                        } else if (item4.value === ''){
+                            item4.value = mmry.value;
+                        } else if (item5.value === ''){
+                            item5.value = mmry.value;
+                        } else if (item6.value === ''){
+                            item6.value = mmry.value;
+                        } else if (item7.value === ''){
+                            item7.value = mmry.value;
+                        } else if (item8.value === ''){
+                            item8.value = mmry.value;
+                        } else if (item9.value === ''){
+                            item9.value = mmry.value;
+                        } else if (item10.value === ''){
+                            item10.value = mmry.value;
+                        } else {
+                            alert('History memory full')
+                        }
+                    }
+                }"
+          />
+
+          <input
+            type="button"
+            class="mry historyBtn"
+            name="m"
+            value="M "
+            disabled
+          />
+        </div>
+        <div class="buttons">
+          <input
+            type="button"
+            name="btn"
+            class="btn"
+            value="%"
+            onclick="display2.value = display.value +'/100'; display.value = display.value / 100"
+          />
+
+          <input
+            type="button"
+            name="btn"
+            class="btn"
+            value="CE"
+            onclick="display.value = 0"
+          />
+
+          <input
+            type="button"
+            name="btn"
+            class="btn"
+            value="C"
+            onclick="display.value = 0; display2.value = ''"
+          />
+
+          <input
+            type="button"
+            name="btn"
+            class="btn"
+            value="Del"
+            onclick="
+                    display.value = display.value.toString().slice(0,-1);
+                    if(display.value === ''){
+                        display.value = 0;
+                    }"
+          />
+
+          <input
+            type="button"
+            name="btn"
+            class="btn"
+            value="1/x"
+            onclick="display2.value = '1/(' + display.value + ')'; display.value = eval(1/display.value)"
+          />
+
+          <input
+            type="button"
+            name="btn"
+            class="btn"
+            value="x &#178;"
+            onclick="display2.value = 'sqr(' + display.value + ')'; display.value = eval(Math.pow(display.value, 2))"
+          />
+
+          <input
+            type="button"
+            name="btn"
+            class="btn"
+            value="2 &#8730; x"
+            onclick="display2.value = '&#8730;(' + display.value + ')'; display.value = eval(Math.sqrt(display.value))"
+          />
+
+          <input
+            type="button"
+            name="btn"
+            class="btn"
+            value="&divide"
+            onclick="display.value += '/'"
+          />
+
+          <input
+            type="button"
+            name="btn"
+            class="btn num"
+            value="7"
+            onclick="
+                if (display.value === '0'){
+                    display.value = 7
+                } else {
+                    display.value += 7;
+                }"
+          />
+
+          <input
+            type="button"
+            name="btn"
+            class="btn num"
+            value="8"
+            onclick="
+                if (display.value === '0'){
+                    display.value = 8
+                } else {
+                    display.value += 8;
+                }"
+          />
+
+          <input
+            type="button"
+            name="btn"
+            class="btn num"
+            value="9"
+            onclick="
+                if (display.value === '0'){
+                    display.value = 9
+                } else {
+                    display.value += 9;
+                }"
+          />
+
+          <input
+            type="button"
+            name="btn"
+            class="btn"
+            value="&#xd7;"
+            onclick="display.value += '*'"
+          />
+
+          <input
+            type="button"
+            name="btn"
+            class="btn num"
+            value="4"
+            onclick="
+                if (display.value === '0'){
+                    display.value = 4
+                } else {
+                    display.value += 4;
+                }
+                "
+          />
+
+          <input
+            type="button"
+            name="btn"
+            class="btn num"
+            value="5"
+            onclick="
+                if (display.value === '0'){
+                    display.value = 5
+                } else {
+                    display.value += 5;
+                }"
+          />
+
+          <input
+            type="button"
+            name="btn"
+            class="btn num"
+            value="6"
+            onclick="
+                if (display.value === '0'){
+                    display.value = 6
+                } else {
+                    display.value += 6;
+                }"
+          />
+
+          <input
+            type="button"
+            name="btn"
+            class="btn"
+            value="&#x2212;"
+            onclick="display.value += '-'"
+          />
+
+          <input
+            type="button"
+            name="btn"
+            class="btn num"
+            value="1"
+            onclick="
+                        if (display.value === '0'){
+                    display.value = 1
+                } else {
+                    display.value += 1;
+                }"
+          />
+
+          <input
+            type="button"
+            name="btn"
+            class="btn num"
+            value="2"
+            onclick="
+                        if (display.value === '0'){
+                    display.value = 2
+                } else {
+                    display.value += 2;
+                }"
+          />
+
+          <input
+            type="button"
+            name="btn"
+            class="btn num"
+            value="3"
+            onclick="if (display.value === '0'){
+                    display.value = 3
+                } else {
+                    display.value += 3;
+                }"
+          />
+
+          <input
+            type="button"
+            name="btn"
+            class="btn"
+            value="+"
+            onclick="display.value += '+'"
+          />
+
+          <input
+            type="button"
+            class="btn"
+            value="+/-"
+            onclick=" 
+                    if (display.value.startsWith('-')){
+                        display.value = display.value.toString().slice(1)
+                    } else if(display.value === '0') {
+                        display.value = 0
+                    } else {
+                        display.value ='-' + display.value
+                    }"
+          />
+
+          <input
+            type="button"
+            class="btn num"
+            value="0"
+            onclick="
+                if (display.value === '0'){
+                    display.value = 0
+                } else {
+                    display.value += 0;
+                }
+                "
+          />
+
+          <input
+            type="button"
+            name="btn"
+            class="btn"
+            value="."
+            onclick="display.value += '.'"
+          />
+
+          <input
+            type="button"
+            name="btn"
+            class="btn eq"
+            value="="
+            onclick="display2.value = display.value + '='; display.value = eval(display.value); "
+          />
+        </div>
+      </form>
+    </div>
+
+    <!-- App: Word -->
+    <div class="word parent drag default" id="word">
+      <div class="title-bar dragheader">
+        <div class="left">
+          <img src="files/icons/word.svg" class="title-icon" />
+          <span class="title">Word</span>
+        </div>
+        <div class="right">
+          <button class="hide"><i class="fa fa-dash"></i></button>
+          <button class="resize"><i class="fa-regular fa-square"></i></button>
+          <a href="#"
+            ><button class="close"><i class="fa fa-close"></i></button
+          ></a>
+        </div>
+      </div>
+
+      <div class="word-page">
+        <textarea class="word-editor"></textarea>
+        <!-- <iframe src="https://spck.io/editor" frameborder="0"></iframe> -->
+      </div>
+    </div>
+
+    <!-- App: VS Code -->
+    <div class="vscode parent drag default" id="vscode">
+      <div class="title-bar dragheader">
+        <div class="left">
+          <img src="files/icons/vs-code.svg" class="title-icon" />
+          <span class="title">Visual Studio Code</span>
+        </div>
+        <div class="right">
+          <button class="hide"><i class="fa fa-dash"></i></button>
+          <button class="resize"><i class="fa-regular fa-square"></i></button>
+          <a href="#"
+            ><button class="close"><i class="fa fa-close"></i></button
+          ></a>
+        </div>
+      </div>
+
+      <div class="vs-page">
+        <iframe src="https://spck.io/editor" frameborder="0"></iframe>
+      </div>
+    </div>
+
+    <!-- App: Chrome -->
+    <div class="chrome parent drag default" id="chrome">
+      <div class="title-bar dragheader">
+        <div class="left">
+          <img src="files/icons/chrome.svg" class="title-icon" />
+          <span class="title">Visual Studio Code</span>
+        </div>
+        <div class="right">
+          <button class="hide"><i class="fa fa-dash"></i></button>
+          <button class="resize"><i class="fa-regular fa-square"></i></button>
+          <a href="#"
+            ><button class="close"><i class="fa fa-close"></i></button
+          ></a>
+        </div>
+      </div>
+
+      <div class="vs-page">
+        <canvas id=""></canvas>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
