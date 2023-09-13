@@ -14,7 +14,7 @@ As part of working on my Front-end skills, I decided to join the trend of recrea
 
 ### Links
 
-- Live Site URL: [See it live](https://order-summary-ericaimhigh.vercel.app/)
+- Live Site URL: [See it live](https://chipper-kringle-7c54ab.netlify.app/)
 
 ## Author
 
